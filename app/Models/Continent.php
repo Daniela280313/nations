@@ -22,6 +22,6 @@ class Continent extends Model
 
     //relacion entre continente y pais
     public function paises(){
-        return $this->hasManyThrough(Region::class,Country::class,'continent_id','region_id');
+        return $this->hasManyThrough(Country::class,Region::class,'continent_id','region_id','continent_id','region_id');
     }
 }
